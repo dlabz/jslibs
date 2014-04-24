@@ -75,22 +75,22 @@ GUID.prototype.toUncompressedString = function(){
 GUID.prototype.parseUncompressedString = function(string){
 	var parts = string.split("-");
 	
-	this.Data1 = parseInt("0x"+parts[0], 16);
-	this.Data2 = parseInt("0x"+parts[1], 16);
-	this.Data3 = parseInt("0x"+parts[2], 16);
+	this.Data1 = parseInt(parts[0], 16);
+	this.Data2 = parseInt(parts[1], 16);
+	this.Data3 = parseInt(parts[2], 16);
 	this.Data4 = [0,0,0,0,0,0,0,0];
 		
 	var temp = parts[3];
-	this.Data4[0] = parseInt("0x"+temp.substring(0, 2), 16);
-	this.Data4[1] = parseInt("0x"+temp.substring(2, 4), 16);
+	this.Data4[0] = parseInt(temp.substring(0, 2), 16);
+	this.Data4[1] = parseInt(temp.substring(2, 4), 16);
 		
 	temp = parts[4];
-	this.Data4[2] = parseInt("0x"+temp.substring(0, 2), 16);
-	this.Data4[3] = parseInt("0x"+temp.substring(2, 4), 16);
-	this.Data4[4] = parseInt("0x"+temp.substring(4, 6), 16);
-	this.Data4[5] = parseInt("0x"+temp.substring(6, 8), 16);
-	this.Data4[6] = parseInt("0x"+temp.substring(8, 10), 16);
-	this.Data4[7] = parseInt("0x"+temp.substring(10, 12), 16);
+	this.Data4[2] = parseInt(temp.substring(0, 2), 16);
+	this.Data4[3] = parseInt(temp.substring(2, 4), 16);
+	this.Data4[4] = parseInt(temp.substring(4, 6), 16);
+	this.Data4[5] = parseInt(temp.substring(6, 8), 16);
+	this.Data4[6] = parseInt(temp.substring(8, 10), 16);
+	this.Data4[7] = parseInt(temp.substring(10, 12), 16);
 };
 
 GUID.table = [
